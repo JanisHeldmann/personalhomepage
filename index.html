@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Janis Heldmann — Acoustic Systems Researcher & Computational Tool Builder</title>
-  <meta name="description" content="Doctoral researcher at Aalto University developing computational tools and integrated workflows for sustainable acoustic materials, perceptual acoustics, and intelligent design decision-making." />
+  <title>Janis Heldmann</title>
+  <meta name="description" content="I shape systems with out-of-the-box thinking and value-oriented action." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,287 +12,760 @@
 
   <style>
     :root {
-      --bg:       #0c0c0a;
-      --surface:  #141412;
-      --surface2: #1c1c19;
-      --border:   #272724;
-      --text:     #e4e0d8;
-      --muted:    #7a7870;
-      --faint:    #222220;
-      --gold:     #b89a5a;
-      --gold-dim: #6a5830;
-      --sage:     #4d6b5e;
-      --sage-lt:  #7aaa94;
+      --bg:      #0c0c0a;
+      --surface: #141412;
+      --sur2:    #1b1b18;
+      --border:  #262622;
+      --faint:   #1e1e1b;
+      --text:    #e4e0d8;
+      --muted:   #7a7870;
+      --gold:    #b89a5a;
+      --golddim: #6a5830;
+      --sage:    #4d6b5e;
+      --sagelt:  #7aaa94;
+      --teal:    #4a7a8a;
+      --teal-bg: #1a3038;
+      --sage-bg: #152218;
+      --teal-mid: #243c45;
+      --sage-mid: #1e3028;
 
-      --font-serif: 'Playfair Display', Georgia, serif;
-      --font-body:  'Didact Gothic', sans-serif;
-      --max: 880px;
-      --gap: clamp(3.5rem, 9vw, 7rem);
+      --serif: 'Playfair Display', Georgia, serif;
+      --body:  'Didact Gothic', sans-serif;
+      --max: 920px;
+      --gap: clamp(4rem, 10vw, 7.5rem);
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
-
     body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: var(--font-body);
-      font-size: clamp(0.93rem, 1.7vw, 1.02rem);
-      line-height: 1.78;
-      -webkit-font-smoothing: antialiased;
+      background: var(--bg); color: var(--text);
+      font-family: var(--body);
+      font-size: clamp(0.92rem, 1.65vw, 1.01rem);
+      line-height: 1.8; -webkit-font-smoothing: antialiased;
     }
-
     a { color: var(--gold); text-decoration: none; }
     a:hover { text-decoration: underline; }
-
-    .wrap {
-      max-width: var(--max);
-      margin-inline: auto;
-      padding-inline: clamp(1.25rem, 5vw, 2.5rem);
-    }
+    .wrap { max-width: var(--max); margin-inline: auto; padding-inline: clamp(1.25rem, 5vw, 2.5rem); }
     section { padding-block: var(--gap); }
+    hr.div { border: none; border-top: 1px solid var(--border); }
 
-    /* NAV */
+    /* ── COLORED SECTIONS ── */
+    .section-teal {
+      background: var(--teal-bg);
+    }
+    .section-sage {
+      background: var(--sage-bg);
+    }
+    .section-teal .label { color: #7adfcc; }
+    .section-teal .label::after { background: #2e5060; }
+    .section-teal .case-block-label { color: #7adfcc; }
+    .section-teal .ctag { color: #7adfcc; border-color: #3a7080; }
+    .section-teal .bcn-label { color: #7adfcc; }
+    .section-teal .bio-chain-node { background: #1e3c48; }
+    .section-teal .bio-chain-highlight { background: #243c45; border-top-color: #7adfcc; }
+    .section-teal .case-block { background: #1e3c48; }
+    .section-teal .case-block-full { background: #243c45; border-top-color: #7adfcc; }
+    .section-teal .case-images { background: #2e5060; }
+    .section-teal .case-grid { background: #2e5060; }
+    .section-teal .case-outcome { background: #2e5060; }
+    .section-teal .outcome-item { background: #1a3038; }
+    .section-teal h2 { color: #e8f8f4; }
+    .section-teal h3 { color: #e8f8f4; }
+    .section-teal .case-sub { color: #8ab8c8; }
+    .section-teal .pub-year { color: #4a9aaa; }
+    .section-teal .pub-badge { color: #7adfcc; border-color: #3a7080; }
+    .section-teal .pub-title { color: #d8f0ec; }
+    .section-teal .pub-title a { color: #d8f0ec; }
+    .section-teal .pub-meta { color: #6a9aaa; }
+    .section-teal .pub-item { border-color: #2e5060; }
+    .section-teal .pub-item:hover { background: #1e3c48; }
+    .section-teal .pub-scroll-wrap { border-color: #2e5060; }
+    .section-teal .pub-scroll-fade { background: linear-gradient(to top, var(--teal-bg) 0%, transparent 100%); }
+    .section-teal .outcome-num { color: #7adfcc; }
+    .section-teal .img-caption { color: rgba(200,240,235,0.6); }
+    .section-teal .bio-collab-item { background: #1e3c48; }
+    .section-teal .bio-collab { background: #2e5060; }
+    .section-teal .bio-framing { background: #2e5060; }
+    .section-teal .bio-frame-col { background: #1e3c48; }
+    .section-teal .bio-chain { background: #2e5060; }
+    .section-teal .bio-chain-arrow { background: #1a3038; color: #7adfcc; }
+    .section-teal .bio-deploy-img { background: #1a3038; }
+    .section-teal .bio-deploy-text { background: #1e3c48; }
+    .section-teal .bio-deployment { background: #2e5060; }
+    .section-teal .bio-pubs { background: #1e3c48; border-top-color: #7adfcc; }
+
+    .section-sage .label { color: var(--sagelt); }
+    .section-sage .label::after { background: #2e4a38; }
+    .section-sage .case-block-label { color: var(--sagelt); }
+    .section-sage .ctag { color: var(--sagelt); border-color: #2e4a38; }
+    .section-sage h2 { color: #e8f4ec; }
+    .section-sage h3 { color: #e8f4ec; }
+    .section-sage .case-sub { color: #7aaa94; }
+    .section-sage .pub-year { color: #4a7a5e; }
+    .section-sage .pub-badge { color: var(--sagelt); border-color: #2e4a38; }
+    .section-sage .pub-title { color: #d0ecd8; }
+    .section-sage .pub-title a { color: #d0ecd8; }
+    .section-sage .pub-meta { color: #5a8a6e; }
+    .section-sage .pub-item { border-color: #2e4a38; }
+    .section-sage .pub-item:hover { background: #1e3028; }
+    .section-sage .pub-scroll-wrap { border-color: #2e4a38; }
+    .section-sage .pub-scroll-fade { background: linear-gradient(to top, var(--sage-bg) 0%, transparent 100%); }
+    .section-sage .bio-deploy-text { background: #1e3028; }
+    .section-sage .bio-pubs { background: #1e3028; border-top-color: var(--sagelt); }
+    .section-sage .bio-chain-node { background: #1e3028; }
+    .section-sage .bio-chain-highlight { background: #263c2e; border-top-color: var(--sagelt); }
+    .section-sage .bio-framing { background: #2e4a38; }
+    .section-sage .bio-frame-col { background: #1e3028; }
+    .section-sage .bio-chain { background: #2e4a38; }
+    .section-sage .bio-chain-arrow { background: #152218; color: var(--sagelt); }
+    .section-sage .bio-collab { background: #2e4a38; }
+    .section-sage .bio-collab-item { background: #1e3028; }
+    .section-sage .bio-deployment { background: #2e4a38; }
+    .section-sage .bio-deploy-img { background: #152218; }
+
+    /* ── NAV ── */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      background: color-mix(in srgb, var(--bg) 90%, transparent);
-      backdrop-filter: blur(14px);
-      border-bottom: 1px solid var(--border);
+      background: color-mix(in srgb, var(--bg) 88%, transparent);
+      backdrop-filter: blur(16px); border-bottom: 1px solid var(--border);
     }
-    nav .wrap {
-      display: flex; align-items: center;
-      justify-content: space-between;
-      padding-block: 1.1rem;
-    }
-    .nav-name {
-      font-family: var(--font-serif);
-      font-size: 1rem; font-weight: 400;
-      letter-spacing: 0.02em; color: var(--text);
-    }
+    nav .wrap { display: flex; align-items: center; justify-content: space-between; padding-block: 1.1rem; }
+    .nav-name { font-family: var(--serif); font-size: 1rem; font-weight: 400; color: var(--text); }
     nav ul { list-style: none; display: flex; gap: 1.75rem; }
-    nav ul a {
-      color: var(--muted); font-size: 0.78rem;
-      letter-spacing: 0.1em; text-transform: uppercase; transition: color 0.2s;
-    }
+    nav ul a { color: var(--muted); font-size: 0.76rem; letter-spacing: 0.1em; text-transform: uppercase; transition: color 0.2s; }
     nav ul a:hover { color: var(--gold); text-decoration: none; }
 
-    /* HERO */
+    /* ── HERO ── */
     #hero {
       min-height: 100vh; display: flex; align-items: center;
       padding-top: 5rem; position: relative; overflow: hidden;
+      background: var(--teal);
     }
     #hero::before {
-      content: ''; position: absolute; top: -20%; right: -10%;
-      width: 60vw; height: 60vw;
-      background: radial-gradient(ellipse at center,
-        color-mix(in srgb, var(--gold) 5%, transparent) 0%, transparent 70%);
-      pointer-events: none;
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 70% 50%, color-mix(in srgb, var(--teal) 60%, #0c0c0a) 0%, #0c0c0a 70%);
+      pointer-events: none; z-index: 0;
     }
-    #hero .wrap { width: 100%; }
+    #hero::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(
+        90deg,
+        color-mix(in srgb, #0c0c0a 95%, transparent) 0%,
+        color-mix(in srgb, #0c0c0a 80%, transparent) 40%,
+        transparent 100%
+      );
+      pointer-events: none; z-index: 1;
+    }
+    #hero .wrap { position: relative; z-index: 2; width: 100%; }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 3rem;
+      align-items: center;
+    }
+    .hero-text { max-width: 560px; }
+
+    .hero-portrait-wrap {
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; animation: fadeUp 0.9s 0.6s forwards;
+    }
+    .hero-portrait-circle {
+      width: clamp(200px, 22vw, 300px);
+      height: clamp(200px, 22vw, 300px);
+      border-radius: 50%;
+      overflow: hidden;
+      border: 2px solid rgba(240,248,250,0.2);
+      flex-shrink: 0;
+    }
+    .hero-portrait-circle img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    @media (max-width: 600px) {
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-portrait-wrap { display: none; }
+    }
+
     .eyebrow {
-      font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase;
-      color: var(--gold); margin-bottom: 1.75rem;
+      font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase;
+      color: #a8d4de; margin-bottom: 1.5rem;
       opacity: 0; animation: fadeUp 0.7s 0.1s forwards;
     }
     h1 {
-      font-family: var(--font-serif);
-      font-size: clamp(3.2rem, 9vw, 6.8rem);
-      font-weight: 400; line-height: 1.0;
-      letter-spacing: -0.01em; margin-bottom: 0.25em;
-      opacity: 0; animation: fadeUp 0.8s 0.22s forwards;
+      font-family: var(--serif);
+      font-size: clamp(2.8rem, 8vw, 6rem);
+      font-weight: 400; line-height: 1.02; letter-spacing: -0.01em;
+      color: #f0f8fa; margin-bottom: 0.3em;
+      opacity: 0; animation: fadeUp 0.8s 0.2s forwards;
     }
-    h1 em { font-style: italic; color: var(--gold); }
-    .hero-sub {
-      font-family: var(--font-serif);
-      font-size: clamp(1rem, 2.2vw, 1.25rem);
-      font-weight: 400; font-style: italic; color: var(--muted);
-      margin-bottom: 2rem;
+    h1 em { font-style: italic; color: #ddeef2; }
+
+    .hero-statement {
+      font-family: var(--serif);
+      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+      font-weight: 400; line-height: 1.45;
+      color: rgba(224, 244, 248, 0.95);
+      margin-bottom: 1rem; max-width: 560px;
       opacity: 0; animation: fadeUp 0.8s 0.34s forwards;
     }
-    .hero-desc {
-      max-width: 560px; color: var(--muted); font-size: 0.97rem;
-      line-height: 1.75; margin-bottom: 2.75rem;
+    .hero-statement em { font-style: italic; color: #f0f8fa; }
+    .hero-body {
+      font-size: clamp(0.92rem, 1.8vw, 1rem);
+      color: rgba(200, 230, 236, 0.72);
+      line-height: 1.78; max-width: 520px;
+      margin-bottom: 2.5rem;
       opacity: 0; animation: fadeUp 0.8s 0.46s forwards;
     }
+    .hero-body em { font-style: italic; color: rgba(224, 244, 248, 0.92); }
+
     .hero-cta {
       display: flex; flex-wrap: wrap; gap: 0.75rem;
-      opacity: 0; animation: fadeUp 0.8s 0.58s forwards;
+      opacity: 0; animation: fadeUp 0.8s 0.5s forwards;
     }
     .btn {
       display: inline-block; padding: 0.55rem 1.3rem;
-      font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase;
+      font-size: 0.73rem; letter-spacing: 0.1em; text-transform: uppercase;
+      border: 1px solid rgba(240,248,250,0.55); color: #f0f8fa;
+      transition: background 0.2s, color 0.2s;
+    }
+    .btn:hover { background: #f0f8fa; color: #1a3a42; text-decoration: none; }
+    .btn.ghost { border-color: rgba(240,248,250,0.22); color: rgba(240,248,250,0.5); }
+    .btn.ghost:hover { border-color: rgba(240,248,250,0.55); background: transparent; color: #f0f8fa; }
+
+    /* re-usable gold btn for lower sections */
+    .btn-dark {
+      display: inline-block; padding: 0.5rem 1.2rem;
+      font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase;
       border: 1px solid var(--gold); color: var(--gold);
       transition: background 0.2s, color 0.2s;
     }
-    .btn:hover { background: var(--gold); color: var(--bg); text-decoration: none; }
-    .btn.ghost { border-color: var(--border); color: var(--muted); }
-    .btn.ghost:hover { border-color: var(--muted); background: transparent; color: var(--text); }
+    .btn-dark:hover { background: var(--gold); color: var(--bg); text-decoration: none; }
+    .btn-dark.ghost { border-color: var(--border); color: var(--muted); }
+    .btn-dark.ghost:hover { border-color: var(--muted); background: transparent; color: var(--text); }
 
-    hr.divider { border: none; border-top: 1px solid var(--border); }
+    hr.div { border: none; border-top: 1px solid var(--border); }
 
-    /* SECTION LABEL */
+    /* ── LABELS ── */
     .label {
-      font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase;
+      font-size: 0.67rem; letter-spacing: 0.22em; text-transform: uppercase;
       color: var(--gold); margin-bottom: 2.75rem;
       display: flex; align-items: center; gap: 1rem;
     }
     .label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
-    .label.sage { color: var(--sage-lt); }
+    .label.sage { color: var(--sagelt); }
 
-    h2 {
-      font-family: var(--font-serif);
-      font-size: clamp(1.6rem, 3.5vw, 2.2rem);
-      font-weight: 400; line-height: 1.2;
+    h2 { font-family: var(--serif); font-size: clamp(1.55rem, 3.5vw, 2.2rem); font-weight: 400; line-height: 1.2; }
+    h3 { font-family: var(--serif); font-size: 1.05rem; font-weight: 400; line-height: 1.3; }
+
+    /* ── CASE STUDY ── */
+    .case-header {
+      display: grid; grid-template-columns: 1fr auto;
+      gap: 2rem; align-items: start; margin-bottom: 2.5rem;
+    }
+    .case-header h2 { margin-bottom: 0.75rem; }
+    .case-sub { color: var(--muted); font-size: 0.92rem; line-height: 1.72; max-width: 540px; }
+    .case-tags { display: flex; flex-direction: column; gap: 0.35rem; align-items: flex-end; padding-top: 0.25rem; }
+    .ctag {
+      font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--sagelt); border: 1px solid var(--sage); padding: 0.18rem 0.55rem;
+      white-space: nowrap;
+    }
+    .case-images {
+      display: grid; grid-template-columns: 1.6fr 1fr;
+      gap: 2px; background: var(--border); margin-bottom: 2px;
+    }
+    .case-img-main, .case-img-side {
+      position: relative; overflow: hidden; background: var(--surface);
+    }
+    .case-img-main { max-height: 380px; }
+    .case-img-side { max-height: 380px; }
+    .case-img-main img, .case-img-side img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+      filter: brightness(0.88) contrast(1.05);
+      transition: filter 0.3s;
+    }
+    .case-img-main:hover img, .case-img-side:hover img { filter: brightness(1) contrast(1.05); }
+    .img-caption {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase;
+      color: rgba(228,224,216,0.6); padding: 0.5rem 0.75rem;
+      background: linear-gradient(to top, rgba(12,12,10,0.7) 0%, transparent 100%);
+    }
+    .case-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 2px; background: var(--border);
+    }
+    .case-block {
+      background: var(--surface); padding: 2rem;
+      display: flex; flex-direction: column; gap: 0.85rem;
+    }
+    .case-block-full { grid-column: span 3; background: var(--sur2); border-top: 1px solid var(--sage); }
+    .case-block-label {
+      font-size: 0.67rem; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--sagelt); margin-bottom: 0.25rem;
+    }
+    .case-block p { font-size: 0.88rem; color: var(--muted); line-height: 1.75; }
+    .case-block p + p { margin-top: 0; }
+    .case-outcome {
+      grid-column: span 3; background: var(--bg);
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 2px; background: var(--border);
+    }
+    .outcome-item {
+      background: var(--bg); padding: 1.5rem 1.75rem;
+      display: flex; flex-direction: column; gap: 0.35rem;
+    }
+    .outcome-num {
+      font-family: var(--serif); font-size: 2rem; font-weight: 400;
+      color: var(--sagelt); line-height: 1;
+    }
+    .outcome-label { font-size: 0.75rem; color: var(--muted); line-height: 1.4; }
+
+    /* ── BIO-BASED CASE STUDY ── */
+    .bio-framing {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 2px; background: var(--border);
+      margin-bottom: 2px;
+    }
+    .bio-frame-col {
+      background: var(--surface); padding: 2rem;
+      display: flex; flex-direction: column; gap: 0.85rem;
+    }
+    .bio-frame-col p { font-size: 0.88rem; color: var(--muted); line-height: 1.75; }
+
+    .bio-chain {
+      display: flex; align-items: stretch;
+      background: var(--border); gap: 1px;
+      margin-bottom: 2px;
+    }
+    .bio-chain-node {
+      flex: 1; background: var(--surface);
+      padding: 1.25rem 1rem;
+      display: flex; flex-direction: column; gap: 0.4rem;
+    }
+    .bio-chain-highlight { background: var(--sur2); border-top: 2px solid var(--sagelt); }
+    .bio-chain-arrow {
+      display: flex; align-items: center; justify-content: center;
+      background: var(--bg); color: var(--sage);
+      font-size: 0.85rem; padding: 0 0.25rem; flex-shrink: 0;
+    }
+    .bcn-label {
+      font-size: 0.63rem; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--sagelt); display: block;
+    }
+    .bcn-text { font-size: 0.8rem; color: var(--muted); line-height: 1.55; }
+
+    .bio-collab {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 2px; background: var(--border); margin-bottom: 2px;
+    }
+    .bio-collab-item {
+      background: var(--sur2); padding: 1.5rem;
+      display: flex; flex-direction: column; gap: 0.6rem;
+    }
+    .bio-collab-item p { font-size: 0.84rem; color: var(--muted); line-height: 1.65; }
+
+    .bio-deployment {
+      display: grid; grid-template-columns: 1.4fr 1fr;
+      gap: 2px; background: var(--border); margin-bottom: 2px;
+    }
+    .bio-deploy-img {
+      overflow: hidden; max-height: 480px;
+    }
+    .bio-deploy-img img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+      filter: brightness(0.92) contrast(1.02);
+      transition: filter 0.3s;
+    }
+    .bio-deploy-img:hover img { filter: brightness(1) contrast(1.02); }
+    .bio-deploy-text {
+      background: var(--surface); padding: 2rem;
+      display: flex; flex-direction: column; gap: 1rem;
+    }
+    .bio-deploy-text h3 {
+      font-family: var(--serif); font-size: 1.25rem;
+      font-weight: 400; color: var(--text); line-height: 1.3;
+      margin-top: 0.25rem;
+    }
+    .bio-deploy-text p { font-size: 0.87rem; color: var(--muted); line-height: 1.75; }
+
+    .bio-pubs {
+      background: var(--surface);
+      padding: 2rem; border-top: 2px solid var(--sagelt);
     }
 
-    /* ABOUT */
-    #about .grid {
+    /* ── EVIDENCE ── */
+    #evidence .intro {
+      font-family: var(--serif);
+      font-size: clamp(1.05rem, 2.3vw, 1.3rem);
+      font-weight: 400; line-height: 1.6;
+      color: var(--muted); max-width: 680px;
+      margin-bottom: 3.5rem;
+    }
+    #evidence .intro em { font-style: italic; color: var(--text); }
+
+    .evidence-cols {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+      background: var(--border);
+    }
+
+    .ev-col {
+      background: var(--bg);
+      padding: 2.25rem 2rem;
+      display: flex; flex-direction: column; gap: 1.75rem;
+    }
+
+    .ev-col-head {
+      display: flex; flex-direction: column; gap: 0.75rem;
+    }
+    .ev-domain-tags {
+      display: flex; flex-wrap: wrap; gap: 0.4rem;
+    }
+    .dtag {
+      font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--gold); border: 1px solid var(--golddim);
+      padding: 0.2rem 0.6rem;
+    }
+    .ev-col-desc {
+      color: var(--muted); font-size: 0.9rem; line-height: 1.72;
+    }
+
+    /* project box inside column */
+    .ev-project {
+      background: var(--sur2);
+      border: 1px solid var(--border);
+      border-left: 2px solid var(--gold);
+      padding: 1.5rem;
+      display: flex; flex-direction: column; gap: 0.75rem;
+      margin-top: auto;
+    }
+    .ev-project .proj-tag {
+      font-size: 0.63rem; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--gold);
+    }
+    .ev-project h3 { color: var(--text); }
+    .ev-project p {
+      font-size: 0.85rem; color: var(--muted); line-height: 1.65;
+    }
+    .ev-project .proj-meta {
+      font-size: 0.75rem; color: var(--muted);
+      border-top: 1px solid var(--border); padding-top: 0.75rem; margin-top: 0.25rem;
+    }
+    .ev-project .proj-meta strong { color: var(--sagelt); font-weight: 400; }
+
+    /* ── THESIS ── */
+    .thesis-block {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      border: 1px solid var(--border);
+      background: var(--surface);
+    }
+    .thesis-left {
+      padding: 2.5rem;
+      border-right: 1px solid var(--border);
+      border-left: 3px solid var(--gold);
+      display: flex; flex-direction: column; gap: 1.25rem;
+    }
+    .thesis-lede {
+      font-family: var(--serif);
+      font-size: clamp(1.15rem, 2.6vw, 1.55rem);
+      font-weight: 400; line-height: 1.45; color: var(--text);
+    }
+    .thesis-lede em { font-style: italic; color: var(--gold); }
+    .thesis-sub {
+      font-size: 0.93rem; color: var(--muted); line-height: 1.78;
+    }
+    .thesis-sub strong { color: var(--text); font-weight: 400; }
+    .thesis-right {
+      padding: 2.5rem;
+      display: flex; flex-direction: column; gap: 1rem;
+    }
+    .thesis-context-head {
+      font-size: 0.67rem; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 0.25rem;
+    }
+    .thesis-context {
+      font-size: 0.9rem; color: var(--muted); line-height: 1.72;
+      margin-bottom: 0.5rem;
+    }
+    .thesis-context strong { color: var(--text); font-weight: 400; }
+    .barrier-list {
+      list-style: none; display: flex; flex-direction: column; gap: 0;
+    }
+    .barrier-list li {
+      font-size: 0.82rem; color: var(--muted); line-height: 1.65;
+      padding-block: 0.8rem;
+      border-top: 1px solid var(--faint);
+    }
+    .b-label {
+      display: block;
+      font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--text); margin-bottom: 0.3rem;
+    }
+    @media (max-width: 680px) {
+      .thesis-block { grid-template-columns: 1fr; }
+      .thesis-left { border-right: none; border-bottom: 1px solid var(--border); }
+      .case-header { grid-template-columns: 1fr; }
+      .case-tags { align-items: flex-start; flex-direction: row; flex-wrap: wrap; }
+      .case-images { grid-template-columns: 1fr; }
+      .case-grid { grid-template-columns: 1fr; }
+      .case-block-full { grid-column: span 1; }
+      .case-outcome { grid-column: span 1; grid-template-columns: repeat(2, 1fr); }
+      .bio-framing { grid-template-columns: 1fr; }
+      .bio-chain { flex-direction: column; }
+      .bio-chain-arrow { padding: 0.25rem; transform: rotate(90deg); }
+      .bio-collab { grid-template-columns: 1fr; }
+      .bio-deployment { grid-template-columns: 1fr; }
+      .consult-header { grid-template-columns: 1fr; gap: 1.75rem; }
+      .art-top { grid-template-columns: 1fr; gap: 1.5rem; }
+      .art-meta { flex-direction: row; flex-wrap: wrap; gap: 1rem; }
+      .art-projects { grid-template-columns: 1fr; }
+      .art-history-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ── ARTISTIC ── */
+    .art-top {
+      display: grid; grid-template-columns: 1fr auto;
+      gap: 3rem; align-items: start; margin-bottom: 3rem;
+    }
+    .art-statement h2 { margin-bottom: 1rem; }
+    .art-lead {
+      font-family: var(--serif); font-size: clamp(1rem, 2.2vw, 1.2rem);
+      font-weight: 400; line-height: 1.55; color: var(--text);
+      margin-bottom: 1rem;
+    }
+    .art-sub { font-size: 0.9rem; color: var(--muted); line-height: 1.75; }
+    .art-meta {
+      display: flex; flex-direction: column; gap: 1.25rem;
+      min-width: 200px; padding-top: 0.25rem;
+    }
+    .art-meta-item { display: flex; flex-direction: column; gap: 0.2rem; }
+    .art-meta-num {
+      font-family: var(--serif); font-size: 1.6rem; font-weight: 400;
+      color: var(--sagelt); line-height: 1;
+    }
+    .art-meta-label { font-size: 0.75rem; color: var(--muted); line-height: 1.4; }
+
+    .art-projects {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1px; background: var(--border); margin-bottom: 2px;
+    }
+    .art-project {
+      background: var(--surface); padding: 2rem;
+      display: flex; flex-direction: column; gap: 0.85rem;
+    }
+    .art-project-head { display: flex; flex-direction: column; gap: 0.35rem; margin-bottom: 0.25rem; }
+    .art-project-tag {
+      font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--sagelt);
+    }
+    .art-project h3 {
+      font-family: var(--serif); font-size: 1.2rem; font-weight: 400;
+      color: var(--text); line-height: 1.25;
+    }
+    .art-project-sub { font-size: 0.78rem; color: var(--muted); font-style: italic; }
+    .art-project p { font-size: 0.86rem; color: var(--muted); line-height: 1.72; }
+
+    .art-history {
+      background: var(--sur2); padding: 2rem;
+      border-top: 2px solid var(--sage);
+    }
+    .art-history-intro {
+      font-size: 0.88rem; color: var(--muted); line-height: 1.72;
+      margin-bottom: 1.5rem; max-width: 680px;
+    }
+    .art-history-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 0; margin-bottom: 1.25rem;
+    }
+    .art-hist-item {
+      display: flex; gap: 1rem; font-size: 0.82rem; color: var(--muted);
+      padding: 0.5rem 0; border-bottom: 1px solid var(--faint);
+    }
+    .art-hist-year {
+      color: var(--sagelt); min-width: 2.5rem; font-size: 0.75rem;
+      padding-top: 0.1rem; flex-shrink: 0;
+    }
+    .art-history-note {
+      font-size: 0.78rem; color: var(--dim); font-style: italic;
+    }
+
+    /* ── CONSULTING ── */
+    .consult-header {
       display: grid; grid-template-columns: 1fr 1fr;
       gap: 3rem; align-items: start;
+      margin-bottom: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid var(--border);
     }
-    #about .big {
-      font-family: var(--font-serif);
-      font-size: clamp(1.15rem, 2.5vw, 1.45rem);
-      line-height: 1.55; font-weight: 400; color: var(--text);
+    .consult-left h2 { margin-bottom: 1rem; }
+    .consult-sub { color: var(--muted); font-size: 0.93rem; line-height: 1.75; }
+    .consult-right { display: flex; flex-direction: column; gap: 1rem; }
+    .consult-right p { color: var(--muted); font-size: 0.88rem; line-height: 1.75; }
+    .consult-areas {
+      list-style: none; display: flex; flex-direction: column; gap: 0.4rem;
     }
-    #about .big em { font-style: italic; color: var(--gold); }
-    #about .right { color: var(--muted); font-size: 0.93rem; line-height: 1.78; }
-    #about .right p + p { margin-top: 1rem; }
-    .tag-row { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1.5rem; }
-    .tag {
-      font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase;
-      color: var(--muted); border: 1px solid var(--border); padding: 0.2rem 0.6rem;
+    .consult-areas li {
+      font-size: 0.85rem; color: var(--muted); padding: 0.35rem 0;
+      border-bottom: 1px solid var(--faint);
+      padding-left: 1rem; position: relative;
+    }
+    .consult-areas li::before { content: '—'; position: absolute; left: 0; color: var(--gold); }
+    .consult-contact { margin-top: 0.5rem; }
+    .tools-intro {
+      font-size: 0.9rem; color: var(--muted); line-height: 1.75;
+      max-width: 680px; margin-bottom: 2rem;
+      padding-top: 0.5rem; border-top: 1px solid var(--border);
     }
 
-    /* PUBLICATIONS */
+    /* ── TOOLS ── */
+    .tool-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1px; background: var(--border);
+    }
+    .tool-card {
+      background: var(--bg); padding: 1.6rem;
+      display: flex; flex-direction: column; gap: 0.6rem;
+      transition: background 0.2s;
+    }
+    .tool-card:hover { background: var(--sur2); }
+    .tool-card .t-tag { font-size: 0.62rem; letter-spacing: 0.13em; text-transform: uppercase; color: var(--muted); }
+    .tool-card h3 { color: var(--text); font-size: 0.98rem; }
+    .tool-card p { font-size: 0.83rem; color: var(--muted); line-height: 1.62; flex: 1; }
+    .tool-card .t-link { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); }
+    .tool-featured {
+      grid-column: span 3;
+      background: var(--surface);
+      border-left: 2px solid var(--gold);
+      display: grid;
+      grid-template-columns: auto 1fr 1fr 1fr auto;
+      gap: 0.4rem 2rem;
+      align-items: start;
+      padding: 1.75rem 2rem;
+    }
+    .tool-featured .t-tag { grid-column: 1 / -1; margin-bottom: 0.1rem; }
+    .tool-featured h3 { font-family: var(--serif); font-size: 1.1rem; font-weight: 400; white-space: nowrap; align-self: start; padding-top: 0.1rem; }
+    .tool-featured p { color: var(--muted); font-size: 0.85rem; line-height: 1.65; align-self: start; }
+    .tool-featured .t-link {
+      white-space: nowrap; align-self: start;
+      border: 1px solid var(--gold); padding: 0.45rem 1rem;
+      font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--gold); transition: background 0.2s, color 0.2s; text-decoration: none;
+    }
+    .tool-featured .t-link:hover { background: var(--gold); color: var(--bg); text-decoration: none; }
+    .tool-featured:hover { background: var(--sur2); }
+
+    /* ── PUB SCROLL WINDOW ── */
+    .pub-scroll-wrap {
+      position: relative;
+      border: 1px solid var(--border);
+    }
+    .pub-scroll-inner {
+      height: 340px;
+      overflow-y: auto;
+      scroll-behavior: smooth;
+      scrollbar-width: thin;
+      scrollbar-color: var(--border) transparent;
+    }
+    .pub-scroll-inner::-webkit-scrollbar { width: 4px; }
+    .pub-scroll-inner::-webkit-scrollbar-track { background: transparent; }
+    .pub-scroll-inner::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+    .pub-scroll-inner .pub-list { margin: 0; }
+    .pub-scroll-inner .pub-item:first-child { border-top: none; }
+    /* fade at bottom */
+    .pub-scroll-fade {
+      position: absolute; bottom: 0; left: 0; right: 0; height: 60px;
+      background: linear-gradient(to top, var(--bg) 0%, transparent 100%);
+      pointer-events: none;
+    }
+
+    /* ── PUBLICATIONS ── */
     .pub-list { list-style: none; }
     .pub-item {
-      display: grid; grid-template-columns: 5.5rem 1fr;
-      gap: 0 1.5rem; padding-block: 1.4rem;
+      display: grid; grid-template-columns: 5rem 1fr;
+      gap: 0 1.5rem; padding-block: 1.3rem;
       border-bottom: 1px solid var(--border); transition: background 0.15s;
     }
     .pub-item:first-child { border-top: 1px solid var(--border); }
     .pub-item:hover { background: var(--surface); }
-    .pub-year { font-size: 0.78rem; color: var(--gold-dim); letter-spacing: 0.04em; padding-top: 0.1rem; }
-    .pub-title { font-size: 0.96rem; color: var(--text); line-height: 1.5; margin-bottom: 0.3rem; }
+    .pub-year { font-size: 0.75rem; color: var(--golddim); padding-top: 0.1rem; }
+    .pub-title { font-size: 0.94rem; color: var(--text); line-height: 1.5; margin-bottom: 0.3rem; }
     .pub-title a { color: var(--text); }
     .pub-title a:hover { color: var(--gold); text-decoration: none; }
-    .pub-meta { font-size: 0.8rem; color: var(--muted); }
+    .pub-meta { font-size: 0.79rem; color: var(--muted); }
     .pub-badge {
       display: inline-block; margin-top: 0.4rem;
-      font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase;
-      color: var(--gold); border: 1px solid var(--gold-dim); padding: 0.1rem 0.45rem;
+      font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--gold); border: 1px solid var(--golddim); padding: 0.1rem 0.45rem;
     }
 
-    /* PROJECTS */
-    .project-grid {
-      display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 1px; background: var(--border);
-    }
-    .project-card {
-      background: var(--bg); padding: 1.75rem;
-      display: flex; flex-direction: column; gap: 0.65rem; transition: background 0.2s;
-    }
-    .project-card:hover { background: var(--surface2); }
-    .project-card .p-tag { font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
-    .project-card h3 { font-family: var(--font-serif); font-size: 1.05rem; font-weight: 400; color: var(--text); line-height: 1.35; }
-    .project-card p { font-size: 0.85rem; color: var(--muted); line-height: 1.65; flex: 1; }
-    .project-card .p-link { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); }
-
-    /* CV */
+    /* ── CV ── */
     .cv-section { margin-bottom: 3rem; }
-    .cv-section h3 {
-      font-family: var(--font-serif); font-size: 1rem;
-      font-weight: 400; font-style: italic; color: var(--muted);
-      margin-bottom: 1.25rem; padding-bottom: 0.5rem;
-      border-bottom: 1px solid var(--border);
-    }
-    .cv-row {
-      display: grid; grid-template-columns: 9rem 1fr;
-      gap: 0.25rem 1.5rem; padding-block: 0.9rem;
-      border-bottom: 1px solid var(--faint);
-    }
-    .cv-date { font-size: 0.75rem; color: var(--muted); padding-top: 0.2rem; line-height: 1.5; }
-    .cv-title-row { font-size: 0.93rem; color: var(--text); margin-bottom: 0.1rem; }
-    .cv-place { font-size: 0.8rem; color: var(--muted); }
-    .cv-note { font-size: 0.78rem; color: var(--gold); margin-top: 0.2rem; }
-    .skills-grid {
-      display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-      gap: 0.5rem 1rem; margin-top: 1rem;
-    }
-    .skill-item {
-      display: flex; justify-content: space-between; font-size: 0.82rem;
-      color: var(--muted); padding: 0.3rem 0; border-bottom: 1px solid var(--faint);
-    }
+    .cv-h { font-family: var(--serif); font-size: 0.95rem; font-weight: 400; font-style: italic; color: var(--muted); margin-bottom: 1.25rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
+    .cv-row { display: grid; grid-template-columns: 9rem 1fr; gap: 0.25rem 1.5rem; padding-block: 0.85rem; border-bottom: 1px solid var(--faint); }
+    .cv-date { font-size: 0.74rem; color: var(--muted); padding-top: 0.2rem; }
+    .cv-t { font-size: 0.92rem; color: var(--text); margin-bottom: 0.1rem; }
+    .cv-p { font-size: 0.79rem; color: var(--muted); }
+    .cv-note { font-size: 0.75rem; color: var(--gold); margin-top: 0.2rem; }
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(155px, 1fr)); gap: 0.4rem 1rem; margin-top: 1rem; }
+    .skill-item { display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--muted); padding: 0.3rem 0; border-bottom: 1px solid var(--faint); }
     .skill-item span { color: var(--text); }
+    .tag-row { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1.25rem; }
+    .tag { font-size: 0.66rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); border: 1px solid var(--border); padding: 0.2rem 0.55rem; }
 
-    /* ARTISTIC */
+    /* ── ARTISTIC ── */
     #artistic { border-top: 1px solid var(--border); position: relative; }
     #artistic::before {
       content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
       background: linear-gradient(90deg, transparent, var(--sage), transparent);
     }
-    .artistic-intro {
-      display: grid; grid-template-columns: 1fr 1fr;
-      gap: 3rem; margin-bottom: 3rem;
-    }
-    .artistic-intro .left p { color: var(--muted); font-size: 0.93rem; line-height: 1.75; margin-top: 1rem; }
-    .artistic-intro .right { color: var(--muted); font-size: 0.88rem; line-height: 1.75; }
-    .artistic-intro .right p + p { margin-top: 0.75rem; }
+    .art-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+    .art-intro .left p { color: var(--muted); font-size: 0.92rem; line-height: 1.75; margin-top: 1rem; }
+    .art-intro .right { color: var(--muted); font-size: 0.87rem; line-height: 1.75; }
+    .art-intro .right p + p { margin-top: 0.75rem; }
     .prod-list { list-style: none; }
-    .prod-item {
-      display: grid; grid-template-columns: 3.5rem 1fr;
-      gap: 0 1rem; padding-block: 0.7rem;
-      border-bottom: 1px solid var(--faint); font-size: 0.85rem;
-    }
-    .prod-year { color: var(--sage-lt); font-size: 0.75rem; padding-top: 0.15rem; }
+    .prod-item { display: grid; grid-template-columns: 3.5rem 1fr; gap: 0 1rem; padding-block: 0.65rem; border-bottom: 1px solid var(--faint); font-size: 0.84rem; }
+    .prod-year { color: var(--sagelt); font-size: 0.73rem; padding-top: 0.15rem; }
     .prod-title { color: var(--muted); }
     .prod-title strong { color: var(--text); font-weight: 400; }
-    .artistic-footer {
-      margin-top: 2rem; font-size: 0.82rem; color: var(--muted);
-      padding: 1.25rem 1.5rem; border: 1px solid var(--border);
-      border-left: 2px solid var(--sage);
-    }
+    .art-footer { margin-top: 2rem; font-size: 0.81rem; color: var(--muted); padding: 1.25rem 1.5rem; border: 1px solid var(--border); border-left: 2px solid var(--sage); }
 
-    /* CONTACT */
+    /* ── CONTACT ── */
     #contact { border-top: 1px solid var(--border); }
-    #contact h2 {
-      font-family: var(--font-serif);
-      font-size: clamp(1.8rem, 4vw, 2.8rem);
-      font-weight: 400; margin-bottom: 1rem;
-    }
-    #contact .sub {
-      max-width: 480px; color: var(--muted);
-      font-size: 0.93rem; line-height: 1.7; margin-bottom: 2rem;
-    }
+    #contact h2 { margin-bottom: 1rem; }
+    #contact .sub { max-width: 500px; color: var(--muted); font-size: 0.92rem; line-height: 1.72; margin-bottom: 2rem; }
     .contact-row { display: flex; flex-wrap: wrap; gap: 0.75rem; }
 
-    /* FOOTER */
     footer { padding-block: 2rem; border-top: 1px solid var(--border); }
-    footer .wrap {
-      display: flex; justify-content: space-between;
-      align-items: center; flex-wrap: wrap; gap: 1rem;
-    }
-    footer p { font-size: 0.75rem; color: var(--muted); }
+    footer .wrap { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    footer p { font-size: 0.73rem; color: var(--muted); }
 
-    /* ANIMATIONS */
+    /* ── ANIMATIONS ── */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(16px); }
       to   { opacity: 1; transform: translateY(0); }
     }
-    .reveal {
-      opacity: 0; transform: translateY(14px);
-      transition: opacity 0.75s ease, transform 0.75s ease;
-    }
+    .reveal { opacity: 0; transform: translateY(14px); transition: opacity 0.75s ease, transform 0.75s ease; }
     .reveal.visible { opacity: 1; transform: translateY(0); }
 
-    @media (max-width: 640px) {
-      #about .grid, .artistic-intro { grid-template-columns: 1fr; gap: 1.75rem; }
-      .pub-item { grid-template-columns: 4rem 1fr; }
+    @media (max-width: 680px) {
+      .evidence-cols { grid-template-columns: 1fr; }
+      .tool-grid { grid-template-columns: 1fr; }
+      .art-intro { grid-template-columns: 1fr; gap: 1.75rem; }
+      .pub-item { grid-template-columns: 3.5rem 1fr; }
       .cv-row { grid-template-columns: 1fr; gap: 0.1rem; }
-      .cv-date { color: var(--gold-dim); font-size: 0.72rem; }
-      nav ul { gap: 1rem; }
-      nav ul a { font-size: 0.7rem; }
+      .cv-date { color: var(--golddim); }
+      nav ul { gap: 0.9rem; }
+      nav ul a { font-size: 0.68rem; }
     }
   </style>
 </head>
@@ -302,9 +775,9 @@
   <div class="wrap">
     <span class="nav-name">Janis Heldmann</span>
     <ul>
-      <li><a href="#research">Research</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#cv">CV</a></li>
+      <li><a href="#glivelab">G Livelab</a></li>
+      <li><a href="#tools">Consulting</a></li>
+      <li><a href="#biobased">Bio-Based</a></li>
       <li><a href="#artistic">Art</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -314,315 +787,372 @@
 <!-- HERO -->
 <section id="hero">
   <div class="wrap">
-    <p class="eyebrow">Acoustic Systems · Sustainability · Computational Design</p>
-    <h1>Janis<br><em>Heldmann</em></h1>
-    <p class="hero-sub">Doctoral Researcher · Aalto University</p>
-    <p class="hero-desc">
-      I identify where complex acoustic and sustainability systems break down in practice and build the computational tools, workflows, and measurement infrastructures that make them usable.
-      My work connects material behaviour, simulation, perception, and real-world engineering constraints into actionable design intelligence across research, industry, and the built environment.
-    </p>
-    <div class="hero-cta">
-      <a class="btn" href="#research">Publications</a>
-      <a class="btn" href="#projects">Tools &amp; Projects</a>
-      <a class="btn ghost" href="#contact">Get in touch</a>
-    </div>
-  </div>
-</section>
-
-<hr class="divider" />
-
-<!-- ABOUT -->
-<section id="about">
-  <div class="wrap reveal">
-    <p class="label">About</p>
-    <div class="grid">
-      <div class="left">
-        <p class="big">
-          I work at the intersection of <em>acoustics, computation, sustainability, and human perception</em> — translating complex technical behaviour into systems people can actually use.
+    <div class="hero-inner">
+      <div class="hero-text">
+        <p class="eyebrow">Acoustics · Systems · Engineering</p>
+        <h1>Janis<br><em>Heldmann</em></h1>
+        <p class="hero-statement">
+          Acoustic systems engineer building tools, models, and real-world deployments.
         </p>
-        <div class="tag-row">
-          <span class="tag">Computational Acoustics</span>
-          <span class="tag">Decision-Support Tools</span>
-          <span class="tag">Sustainable Materials</span>
-          <span class="tag">Perceptual Acoustics</span>
-          <span class="tag">Transfer Matrix Modelling</span>
-          <span class="tag">Physics-Based Simulation</span>
-          <span class="tag">AI-Assisted Workflows</span>
-          <span class="tag">Python · MATLAB</span>
-          <span class="tag">COMSOL</span>
-          <span class="tag">Signal Processing</span>
-          <span class="tag">AES Peer Reviewer</span>
+        <p class="hero-body">
+          From 64-channel reverberation systems in live venues to bio-based acoustic materials,
+          my work focuses on what happens when
+          <em>controlled models meet messy physical reality.</em>
+        </p>
+        <div class="hero-cta">
+          <a class="btn" href="#glivelab">See the work</a>
+          <a class="btn ghost" href="#contact">Get in touch</a>
         </div>
       </div>
-      <div class="right">
-        <p>
-          My PhD at Aalto Acoustics Lab focuses on foam-formed cellulose-based absorbers —
-          reed fibres, lupine, softwood — measuring their acoustic properties,
-          fitting physical models to data, and predicting real-room performance.
-          I care about the full chain: from a specimen in an impedance tube
-          to a specification an architect can use.
-        </p>
-        <p>
-          Before acoustics I trained as a nanoengineer at Universität Duisburg-Essen,
-          which means I think about material behaviour across scales.
-          Before that, I competed at the highest levels of breakdance,
-          toured internationally as a theatre performer across Germany and Europe,
-          and directed youth dance projects in the Ruhr.
-          That background is not incidental — it shapes how I communicate,
-          collaborate, and approach problems without clean answers.
-        </p>
-        <p>
-          I peer-review for the AES Journal. Open to Application Engineer
-          and R&D roles from summer 2026.
-        </p>
+      <div class="hero-portrait-wrap">
+        <div class="hero-portrait-circle">
+          <img src="portrait3.png" alt="Janis Heldmann" />
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<hr class="divider" />
+<hr class="div" />
 
-<!-- RESEARCH -->
-<section id="research">
+<!-- G LIVELAB CASE STUDY -->
+<section id="glivelab">
   <div class="wrap reveal">
-    <p class="label">Research &amp; Systems Development</p>
-    <ul class="pub-list">
+    <p class="label sage">Case Study · Deployed System</p>
 
-      <li class="pub-item">
-        <span class="pub-year">2026</span>
-        <div>
-          <p class="pub-title">
-            <a href="https://doi.org/10.1016/j.apacoust.2025.111200" target="_blank">
-              Sound Absorption of Foam-Formed Softwood Fibres: Characterization, Modelling, Prediction
-            </a>
-          </p>
-          <p class="pub-meta">Janis Heldmann, Jose Cucharero-Moya, Tapio Lokki · <em>Applied Acoustics</em></p>
-          <span class="pub-badge">Journal Article</span>
+    <div class="case-header">
+      <div>
+        <h2>Reverberation Enhancement System<br>G Livelab Helsinki &amp; Tampere</h2>
+        <p class="case-sub">A deployed multi-channel reverberation system developed through research at Aalto Acoustics Lab and implemented in live music venues across Finland. The project focused on a recurring problem in acoustic engineering: how to move spatial audio research beyond controlled laboratory conditions into systems that remain stable, usable, and reliable during real performances.</p>
+      </div>
+      <div class="case-tags">
+        <span class="ctag">64-channel FDN</span>
+        <span class="ctag">Real-time DSP</span>
+        <span class="ctag">Spatial acoustics</span>
+        <span class="ctag">Live deployment</span>
+      </div>
+    </div>
+
+    <!-- IMAGE PAIR -->
+    <div class="case-images">
+      <div class="case-img-main">
+        <img src="glivelab.png" alt="G Livelab Helsinki venue" />
+        <span class="img-caption">G Livelab Helsinki</span>
+      </div>
+      <div class="case-img-side">
+        <img src="mcc-karolina.jpg" alt="Multi-channel speaker array at Aalto Acoustics Lab" />
+        <span class="img-caption">Multi-channel speaker array · Aalto Acoustics Lab</span>
+      </div>
+    </div>
+
+    <!-- CONTENT GRID -->
+    <div class="case-grid">
+
+      <div class="case-block">
+        <p class="case-block-label">The Challenge</p>
+        <p>G Livelab hosts amplified concerts, acoustic performances, and immersive productions in spaces not originally designed around a single acoustic identity.</p>
+        <p>The difficulty was not simply generating reverberation, but operating a large-scale reinforcement system under live conditions with open microphones, changing stage configurations, strict latency constraints, and engineers whose attention needed to remain on the performance rather than on DSP infrastructure.</p>
+        <p>The system had to integrate into an existing venue workflow and remain manageable during concerts without requiring specialist knowledge in spatial acoustics or feedback control.</p>
+      </div>
+
+      <div class="case-block">
+        <p class="case-block-label">My Role</p>
+        <p>My work focused on the implementation and deployment of the reverberation system architecture, including real-time DSP integration, feedback mitigation, computational optimisation, and system tuning in the venue environment.</p>
+        <p>This included translating a research prototype into a stable operational system that could function reliably in everyday concert use while remaining practical for venue engineers to operate.</p>
+      </div>
+
+      <div class="case-block">
+        <p class="case-block-label">The System</p>
+        <p>The reverberation engine is based on a 64-channel Feedback Delay Network using frequency-domain matrix operations to reduce computational cost at high channel counts.</p>
+        <p>To reduce the risk of acoustic feedback in live conditions, the system employs a time-varying feedback matrix while preserving spatial coherence and perceptual stability.</p>
+        <p>The architecture was designed around practical deployment constraints: low-latency operation, reliable real-time behaviour, scalable routing, and a control structure that could be used confidently during live events.</p>
+      </div>
+
+      <div class="case-block case-block-full">
+        <p class="case-block-label">From Research to Deployment</p>
+        <p>Many acoustic systems function well as laboratory prototypes but become difficult to maintain once exposed to the realities of deployment: hardware limitations, unstable feedback behaviour, computational limits, changing room conditions, and operator workflow under pressure.</p>
+        <p>This project required bridging research in artificial reverberation and spatial acoustics with the practical constraints of live venue operation. The system is now in regular use at G Livelab venues for acoustic and immersive performances, serving as an ongoing demonstration of multi-channel reverberation research in a real-world environment.</p>
+      </div>
+
+      <div class="case-outcome">
+        <div class="outcome-item">
+          <span class="outcome-num">40</span>
+          <span class="outcome-label">Loudspeakers · 6 microphones · 64-channel system</span>
         </div>
-      </li>
-
-      <li class="pub-item">
-        <span class="pub-year">2025</span>
-        <div>
-          <p class="pub-title">
-            <a href="https://www.doi.org/10.61782/fa.2025.0779" target="_blank">
-              Sound Absorption Prediction of High-Density Foam-Formed Softwood Fibres
-            </a>
-          </p>
-          <p class="pub-meta">Janis Heldmann, Jose Cucharero-Moya, Tapio Lokki · <em>Forum Acusticum / Euronoise 2025</em></p>
-          <span class="pub-badge">Conference</span>
+        <div class="outcome-item">
+          <span class="outcome-num">2</span>
+          <span class="outcome-label">Deployed venues</span>
         </div>
-      </li>
-
-      <li class="pub-item">
-        <span class="pub-year">2024</span>
-        <div>
-          <p class="pub-title">
-            Characterization, Modelling and Prediction of Bio-based Foam-Formed Fibres for Sound Absorption
-          </p>
-          <p class="pub-meta">Janis Heldmann, Jose Cucharero-Moya, Tapio Lokki · <em>INTER-NOISE 2024</em></p>
-          <span class="pub-badge">Conference</span>
+        <div class="outcome-item">
+          <span class="outcome-num">🏆</span>
+          <span class="outcome-label">3rd Best Paper · DAFx 2021</span>
         </div>
-      </li>
-
-      <li class="pub-item">
-        <span class="pub-year">2023</span>
-        <div>
-          <p class="pub-title">
-            Modelling of Hierarchical Pore Structures in Freeze-Dried Pectin Cryogels
-          </p>
-          <p class="pub-meta">Janis Heldmann, Makoto Ueki, Tapio Lokki · <em>Symposium on the Acoustics of Poro-Elastic Materials</em></p>
-          <span class="pub-badge">Conference</span>
+        <div class="outcome-item">
+          <span class="outcome-num">JAES</span>
+          <span class="outcome-label">Case study currently under review</span>
         </div>
-      </li>
+      </div>
 
-      <li class="pub-item">
-        <span class="pub-year">2023</span>
-        <div>
-          <p class="pub-title">
-            <a href="https://doi.org/10.61782/fa.2023.0617" target="_blank">
-              Bending of Sound Waves in the Vicinity of Porous Materials
-            </a>
-          </p>
-          <p class="pub-meta">Arif Yurek, Janis Heldmann, Tapio Lokki · <em>European Acoustics Association Convention</em></p>
-          <span class="pub-badge">Conference</span>
-        </div>
-      </li>
+    </div>
 
-      <li class="pub-item">
-        <span class="pub-year">2021</span>
-        <div>
-          <p class="pub-title">The Role of Modal Excitation in Colorless Reverberation</p>
-          <p class="pub-meta">Janis Heldmann, Sebastian Schlecht · <em>DAFx 2021, Vienna</em></p>
-          <span class="pub-badge">🏆 3rd Best Paper Award · DAFx 2021</span>
-        </div>
-      </li>
+    <!-- GLIVELAB PUBLICATIONS -->
+    <div class="bio-pubs" style="margin-top:2px;">
+      <p class="case-block-label" style="margin-bottom:1rem;">Published &amp; Submitted Research</p>
+      <ul class="pub-list">
 
-    </ul>
+        <li class="pub-item">
+          <span class="pub-year">2021</span>
+          <div>
+            <p class="pub-title">The Role of Modal Excitation in Colorless Reverberation</p>
+            <p class="pub-meta">Janis Heldmann, Sebastian Schlecht · <em>DAFx 2021, Vienna</em></p>
+            <span class="pub-badge">🏆 3rd Best Paper Award · DAFx 2021</span>
+          </div>
+        </li>
+
+        <li class="pub-item">
+          <span class="pub-year">2026</span>
+          <div>
+            <p class="pub-title">Reverberation Enhancement System Design and Operation: A Case Study</p>
+            <p class="pub-meta">Gian Marco De Bortoli*, Janis Heldmann*, Karolina Prawda, Sebastian J. Schlecht, Tapio Lokki · <em>Journal of the Audio Engineering Society</em></p>
+            <span class="pub-badge">* Equal contribution · Under Review · JAES 2026</span>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+
   </div>
 </section>
 
-<hr class="divider" />
-
-<!-- PROJECTS -->
-<section id="projects">
+<!-- TOOLS -->
+<section id="tools">
   <div class="wrap reveal">
-    <p class="label">Computational Tools &amp; Applied Systems</p>
-    <div class="project-grid">
+    <p class="label">Consulting &amp; Tools</p>
 
-      <div class="project-card">
-        <span class="p-tag">Python · Browser · TMM</span>
+    <div class="consult-header">
+      <div class="consult-left">
+        <h2>Making acoustic complexity usable.</h2>
+        <p class="consult-sub">I develop browser-based tools, modelling workflows, and reporting systems that translate acoustic analysis into practical decisions. The focus is not only modelling accuracy, but usability: tools that help acoustic analysis function outside specialist research workflows and support real design, engineering, and material decisions.</p>
+        <p class="consult-sub" style="margin-top:0.85rem;">The throughline across all of it: reducing the distance between technical knowledge and actionable decisions.</p>
+      </div>
+      <div class="consult-right">
+        <p class="case-block-label" style="margin-bottom:0.85rem;">Areas of Work</p>
+        <ul class="consult-areas">
+          <li>Acoustic modelling and prediction</li>
+          <li>Measurement and characterisation workflows</li>
+          <li>Browser-based technical visualisation tools</li>
+          <li>Research-to-deployment system design</li>
+          <li>Decision-support interfaces for acoustic analysis</li>
+          <li>Scientific reporting and data pipelines</li>
+        </ul>
+        <div class="consult-contact" style="margin-top:1.5rem;">
+          <a class="btn-dark" href="mailto:janis.heldmann@aalto.fi">Get in touch</a>
+        </div>
+      </div>
+    </div>
+
+    <p class="tools-intro">Many acoustic workflows remain fragmented across scripts, spreadsheets, proprietary software, and specialist knowledge that is difficult to communicate outside a research environment. These tools were developed to reduce that fragmentation and create more direct interaction between modelling, measurement, and operational use.</p>
+
+    <div class="tool-grid">
+
+      <div class="tool-card tool-featured">
+        <span class="t-tag">Deployed &middot; Procurement &middot; ISO-aligned</span>
+        <h3>Acoustic Material Passport Generator</h3>
+        <p>A browser-based reporting tool that translates acoustic characterisation data into structured, procurement-ready documentation for material evaluation and comparison.</p>
+        <p>The tool combines JCAL parameters, absorption measurements, specimen metadata, and sustainability metrics into a standardised format intended to support communication between researchers, manufacturers, and specifiers in the material evaluation process.</p>
+        <a class="t-link" href="material-passport.html" target="_blank">Open tool &rarr;</a>
+      </div>
+
+      <div class="tool-card">
+        <span class="t-tag">Operational &middot; Material development</span>
         <h3>JCAL Two-Layer Absorption Calculator</h3>
-        <p>Transfer-matrix calculator for layered porous absorbers, ported from Python to the browser. Live SVG cross-section, air gap slider, A/B orientation toggle. Built in parallel with the FA2026 paper.</p>
-        <span class="p-link">Browser tool</span>
+        <p>An interactive tool for exploring how porous material parameters influence predicted absorption behaviour across layered structures and orientations.</p>
+        <p>Originally developed as part of my own research workflow to make the relationships between transport parameters, layer geometry, and acoustic response more directly interpretable during material development. Rather than replacing analytical models, the interface functions as an intuition-building layer on top of them.</p>
+        <span class="t-link">Operational</span>
       </div>
 
-      <div class="project-card">
-        <span class="p-tag">Python · JCAL · Signal Processing</span>
-        <h3>Reed &amp; Lupine Analysis Pipeline</h3>
-        <p>End-to-end Python pipeline for foam-formed bio-fibre characterisation: RokCell XML data loading, impedance tube processing, JCAL parameter fitting via optimisation, TMM prediction, and publication-ready figures.</p>
-        <span class="p-link">Research code</span>
-      </div>
-
-      <div class="project-card">
-        <span class="p-tag">Acoustics · Lumped Element · Browser</span>
+      <div class="tool-card">
+        <span class="t-tag">Operational &middot; Resonator design</span>
         <h3>Dual-Neck Helmholtz Resonator Calculator</h3>
-        <p>Frequency response calculator for MEMS microphone inlet design. Lumped-element modelling with end-correction logic. v1.4, fully browser-based.</p>
-        <span class="p-link">Browser tool</span>
+        <p>A browser-based frequency response tool for resonator acoustics applied to microphone inlet and acoustic cavity design. Built on a lumped-element model with end-correction logic.</p>
+        <p>Designed to make resonator tuning accessible at the design stage, where iteration between geometry and acoustic behaviour needs to happen before physical prototyping begins.</p>
+        <span class="t-link">Operational &middot; v1.4</span>
       </div>
 
-      <div class="project-card">
-        <span class="p-tag">ML · PyTorch · ONNX · Browser</span>
+      <div class="tool-card">
+        <span class="t-tag">Research prototype &middot; Inverse modelling</span>
         <h3>Acoustic Material Identifier</h3>
-        <p>Neural surrogate model for estimating JCAL transport parameters from impulse response measurements. PyTorch → ONNX → in-browser inference. JCAL forward model phase complete.</p>
-        <span class="p-link">In progress</span>
+        <p>A research prototype exploring whether JCAL transport parameters can be estimated from impulse response measurements using a neural surrogate model.</p>
+        <p>The forward model phase is complete. The long-term goal is to make material characterisation possible in field and industrial settings where impedance tube measurements are impractical or unavailable.</p>
+        <span class="t-link">Research prototype</span>
       </div>
 
-      <div class="project-card">
-        <span class="p-tag">Applied Acoustics · Live Venues</span>
-        <h3>Reverberation Enhancement — G Livelab</h3>
-        <p>Designed and tuned reverberation enhancement systems at G Livelab Helsinki and Tampere. On-site measurements, feedback calibration, collaboration with venue operators and engineers.</p>
-        <span class="p-link">2022 · Aalto Acoustics Lab</span>
+      <div class="tool-card">
+        <span class="t-tag">Production workflow &middot; Research pipeline</span>
+        <h3>Bio-Material Characterisation Pipeline</h3>
+        <p>An end-to-end Python pipeline connecting impedance tube measurement data to JCAL parameter fitting, transfer-matrix prediction, and publication-ready figure generation.</p>
+        <p>Developed for reproducibility across collaborating research groups and validated against analytical models and measurement workflows. Structured to support the full chain from raw specimen data to modelled acoustic performance.</p>
+        <span class="t-link">Production workflow</span>
       </div>
 
-      <div class="project-card">
-        <span class="p-tag">Sound Design · Theatre</span>
-        <h3>Edged in the Skin</h3>
-        <p>Sound design for Mia Malveniemi Company, Vaasa 2025. Spatial composition for live performance, bridging acoustic research and artistic production practice.</p>
-        <span class="p-link">2025 · Vaasa, Finland</span>
+      <div class="tool-card">
+        <span class="t-tag">Custom development &middot; On request</span>
+        <h3>Custom Acoustic Reporting Interfaces</h3>
+        <p>Bespoke browser-based interfaces for acoustic measurement reporting, performance visualisation, and technical communication to non-specialist audiences.</p>
+        <p>Built for contexts where the primary challenge is not computation but interpretation: making acoustic outputs legible to architects, procurement teams, or clients who need to act on technical data they did not generate themselves.</p>
+        <span class="t-link">On request</span>
       </div>
 
     </div>
   </div>
 </section>
 
-<hr class="divider" />
+<hr class="div" />
 
-<!-- CV -->
-<section id="cv">
+<!-- BIO-BASED CASE STUDY -->
+<section id="biobased">
   <div class="wrap reveal">
-    <p class="label">CV</p>
+    <p class="label">Case Study &middot; PhD Research</p>
 
-    <div class="cv-section">
-      <h3>Education</h3>
-      <div class="cv-row">
-        <span class="cv-date">2022 – present</span>
-        <div>
-          <p class="cv-title-row">PhD Candidate — Acoustics</p>
-          <p class="cv-place">Aalto University · Espoo, Finland</p>
-          <p class="cv-note">Aalto Acoustics Lab · Supervisor: Prof. Tapio Lokki</p>
-        </div>
+    <div class="case-header">
+      <div>
+        <h2>Bio-Based Foam-Formed Sound Absorbers</h2>
+        <p class="case-sub">PhD Research &middot; Acoustic Modelling and Characterisation &middot; Aalto University</p>
       </div>
-      <div class="cv-row">
-        <span class="cv-date">2019 – 2021</span>
-        <div>
-          <p class="cv-title-row">M.Sc. — Acoustics and Audio Technology</p>
-          <p class="cv-place">Aalto University · Espoo, Finland</p>
-          <p class="cv-note">Final mark: 4.57 / 5 (A)</p>
-        </div>
-      </div>
-      <div class="cv-row">
-        <span class="cv-date">2010 – 2016</span>
-        <div>
-          <p class="cv-title-row">B.Sc. — NanoEngineering</p>
-          <p class="cv-place">Universität Duisburg-Essen · Germany</p>
-          <p class="cv-note">Final mark: 2.0 (B+/A–)</p>
-        </div>
+      <div class="case-tags">
+        <span class="ctag">JCAL Modelling</span>
+        <span class="ctag">Impedance Tube</span>
+        <span class="ctag">Transfer Matrix Method</span>
+        <span class="ctag">Foam-Forming</span>
+        <span class="ctag">Ongoing PhD</span>
       </div>
     </div>
 
-    <div class="cv-section">
-      <h3>Research, Engineering &amp; Systems Development</h3>
-      <div class="cv-row">
-        <span class="cv-date">2022 – present</span>
-        <div>
-          <p class="cv-title-row">Doctoral Researcher</p>
-          <p class="cv-place">Aalto Acoustics Lab · Espoo, Finland</p>
-        </div>
+    <div class="bio-framing">
+      <div class="bio-frame-col">
+        <p>Bio-based acoustic materials are often treated as too variable and unpredictable for reliable modelling and deployment. My research focuses on how existing acoustic modelling frameworks fail when applied to structurally irregular bio-based materials.</p>
+        <p>The work centres on foam-formed plant fibre absorbers whose internal density gradients and directional structures challenge assumptions embedded in conventional porous acoustic models. The framework used to evaluate these materials was not built for them.</p>
+        <p>My work combines acoustic characterisation, JCAL modelling, transfer matrix prediction, and analysis of orientation-dependent behaviour in foam-formed porous structures.</p>
       </div>
-      <div class="cv-row">
-        <span class="cv-date">2022</span>
-        <div>
-          <p class="cv-title-row">Project Researcher</p>
-          <p class="cv-place">Aalto Acoustics Lab — Reverberation enhancement, G Livelab Helsinki &amp; Tampere</p>
-        </div>
-      </div>
-      <div class="cv-row">
-        <span class="cv-date">2020 – 2021</span>
-        <div>
-          <p class="cv-title-row">Research Assistant</p>
-          <p class="cv-place">Aalto Acoustics Lab — Psychoacoustics, measurement campaigns, data analysis</p>
-        </div>
-      </div>
-      <div class="cv-row">
-        <span class="cv-date">Summer 2015</span>
-        <div>
-          <p class="cv-title-row">Intern</p>
-          <p class="cv-place">Institute for Energy and Environmental Technology (IUTA) · Germany</p>
-        </div>
-      </div>
-      <div class="cv-row">
-        <span class="cv-date">Summer 2012</span>
-        <div>
-          <p class="cv-title-row">Intern</p>
-          <p class="cv-place">Eickhoff Wind Power GmbH · Germany</p>
-        </div>
+      <div class="bio-frame-col">
+        <p class="case-block-label" style="margin-bottom:0.75rem;">Research Focus</p>
+        <p>The research combines acoustic characterisation, physical modelling, and material synthesis across collaborations between Aalto Acoustics Lab, Aalto Chemistry Department, and Lumir Oy.</p>
+        <ul class="consult-areas" style="margin-top:0.75rem;">
+          <li>JCAL modelling limitations for bio-based fibres</li>
+          <li>Orientation-dependent acoustic behaviour</li>
+          <li>Transfer matrix prediction of layered structures</li>
+          <li>Density-gradient effects in foam-formed materials</li>
+          <li>Linking laboratory characterisation with architectural deployment</li>
+        </ul>
       </div>
     </div>
 
-    <div class="cv-section">
-      <h3>Awards &amp; Recognition</h3>
-      <div class="cv-row">
-        <span class="cv-date">2021</span>
-        <div>
-          <p class="cv-title-row">3rd Best Paper Award — DAFx 2021</p>
-          <p class="cv-place">Vienna, Austria</p>
-        </div>
+    <!-- CHAIN -->
+    <div class="bio-chain">
+      <div class="bio-chain-node">
+        <span class="bcn-label">Raw Material</span>
+        <span class="bcn-text">Reed &middot; Lupine &middot; Softwood</span>
       </div>
-      <div class="cv-row">
-        <span class="cv-date">2011 &amp; 2012</span>
-        <div>
-          <p class="cv-title-row">German Champion — Battle of the Year (Winner &amp; Best Show)</p>
-          <p class="cv-place">8th Place World Championship 2012 · 3rd Place European Championship 2008</p>
-        </div>
+      <div class="bio-chain-arrow">&rarr;</div>
+      <div class="bio-chain-node">
+        <span class="bcn-label">Foam-Forming</span>
+        <span class="bcn-text">Creates density gradients that break standard model assumptions</span>
+      </div>
+      <div class="bio-chain-arrow">&rarr;</div>
+      <div class="bio-chain-node bio-chain-highlight">
+        <span class="bcn-label">Characterisation</span>
+        <span class="bcn-text">Impedance tube &middot; ISO 10534-2 &middot; JCAL fitting</span>
+      </div>
+      <div class="bio-chain-arrow">&rarr;</div>
+      <div class="bio-chain-node bio-chain-highlight">
+        <span class="bcn-label">Modelling</span>
+        <span class="bcn-text">Transfer matrix method &middot; Analytical fibrous models &middot; Layered approaches</span>
+      </div>
+      <div class="bio-chain-arrow">&rarr;</div>
+      <div class="bio-chain-node">
+        <span class="bcn-label">Deployment</span>
+        <span class="bcn-text">Lumir Oy &middot; Real-world production and architectural installation</span>
       </div>
     </div>
 
-    <div class="cv-section">
-      <h3>Technical &amp; Computational Capabilities</h3>
-      <div class="skills-grid">
-        <div class="skill-item"><span>MATLAB</span>Advanced</div>
-        <div class="skill-item"><span>Python</span>Intermediate</div>
-        <div class="skill-item"><span>COMSOL</span>Advanced</div>
-        <div class="skill-item"><span>LaTeX</span>Advanced</div>
-        <div class="skill-item"><span>SoundPlan</span>Basic</div>
-        <div class="skill-item"><span>GitHub</span>Proficient</div>
+    <!-- GRAND HANSA DEPLOYMENT -->
+    <div class="bio-deployment">
+      <div class="bio-deploy-img">
+        <img src="grand-hansa.jpg" alt="Grand Hansa Helsinki, Lumir bio-based acoustic treatment" />
       </div>
-      <div class="tag-row" style="margin-top:1.25rem;">
-        <span class="tag">German — Native</span>
-        <span class="tag">English — Fluent (IELTS 8.0)</span>
-        <span class="tag">Finnish — B2</span>
-        <span class="tag">Spanish — Basic</span>
+      <div class="bio-deploy-text">
+        <p class="case-block-label">Real Deployment &middot; Lumir Oy</p>
+        <h3>Grand Hansa, Helsinki</h3>
+        <p>Lumir's foam-formed bio-based material is sprayed directly onto existing structures in heritage spaces, conforming to complex geometries without altering the visual character of the architecture.</p>
+        <p>This is the deployment challenge that laboratory characterisation must ultimately serve: a material that performs acoustically, installs without disruption, and remains invisible once in place.</p>
+        <p>The collaboration between Aalto Acoustics Lab and Lumir Oy creates a direct feedback loop between material synthesis, acoustic characterisation, and real-world installation, shortening the distance between a measurement in an impedance tube and a decision on a building site.</p>
+      </div>
+    </div>
+
+    <!-- PUBLICATIONS -->
+    <div class="bio-pubs">
+      <p class="case-block-label" style="margin-bottom:1rem;">Published Research</p>
+      <div class="pub-scroll-wrap">
+        <div class="pub-scroll-inner" id="bioScroll">
+          <ul class="pub-list">
+
+            <li class="pub-item">
+              <span class="pub-year">2026</span>
+              <div>
+                <p class="pub-title"><a href="https://doi.org/10.1016/j.apacoust.2025.111200" target="_blank">Sound Absorption of Foam-Formed Softwood Fibres: Characterization, Modelling, Prediction</a></p>
+                <p class="pub-meta">Janis Heldmann, Jose Cucharero-Moya, Tapio Lokki &middot; <em>Applied Acoustics</em></p>
+                <span class="pub-badge">Journal Article</span>
+              </div>
+            </li>
+
+            <li class="pub-item">
+              <span class="pub-year">2026</span>
+              <div>
+                <p class="pub-title">Orientation-Dependent Acoustic Behaviour of Foam-Formed Reed and Lupine Fibre Absorbers: Limitations of Homogeneous Porous Modelling</p>
+                <p class="pub-meta">Janis Heldmann, Marike Langhans, Tapio Lokki &middot; <em>Forum Acusticum 2026, Graz</em></p>
+                <span class="pub-badge">Conference &middot; Peer Reviewed</span>
+              </div>
+            </li>
+
+            <li class="pub-item">
+              <span class="pub-year">2025</span>
+              <div>
+                <p class="pub-title"><a href="https://www.doi.org/10.61782/fa.2025.0779" target="_blank">Sound Absorption Prediction of High-Density Foam-Formed Softwood Fibres</a></p>
+                <p class="pub-meta">Janis Heldmann, Jose Cucharero-Moya, Tapio Lokki &middot; <em>Forum Acusticum / Euronoise 2025</em></p>
+                <span class="pub-badge">Conference</span>
+              </div>
+            </li>
+
+            <li class="pub-item">
+              <span class="pub-year">2024</span>
+              <div>
+                <p class="pub-title">Characterization, Modelling and Prediction of Bio-based Foam-Formed Fibres for Sound Absorption</p>
+                <p class="pub-meta">Janis Heldmann, Jose Cucharero-Moya, Tapio Lokki &middot; <em>INTER-NOISE 2024</em></p>
+                <span class="pub-badge">Conference</span>
+              </div>
+            </li>
+
+            <li class="pub-item">
+              <span class="pub-year">2023</span>
+              <div>
+                <p class="pub-title">Modelling of Hierarchical Pore Structures in Freeze-Dried Pectin Cryogels</p>
+                <p class="pub-meta">Janis Heldmann, Makoto Ueki, Tapio Lokki &middot; <em>Symposium on the Acoustics of Poro-Elastic Materials</em></p>
+                <span class="pub-badge">Conference</span>
+              </div>
+            </li>
+
+            <li class="pub-item">
+              <span class="pub-year">2023</span>
+              <div>
+                <p class="pub-title"><a href="https://doi.org/10.61782/fa.2023.0617" target="_blank">Bending of Sound Waves in the Vicinity of Porous Materials</a></p>
+                <p class="pub-meta">Arif Yurek, Janis Heldmann, Tapio Lokki &middot; <em>European Acoustics Association Convention</em></p>
+                <span class="pub-badge">Conference</span>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+        <div class="pub-scroll-fade"></div>
       </div>
     </div>
 
@@ -632,60 +1162,80 @@
 <!-- ARTISTIC -->
 <section id="artistic">
   <div class="wrap reveal">
-    <p class="label sage">Artistic Work</p>
-    <div class="artistic-intro">
-      <div class="left">
-        <h2>A decade on stage.</h2>
-        <p>
-          Before acoustics research became my primary work, I spent more than ten years
-          as a professional dancer, performer, and choreographer — competing at world level,
-          touring internationally, and making work with some of Germany's leading theatre houses.
-          That chapter is complete. What it left behind is a way of thinking about
-          bodies, space, and sound that doesn't fit neatly into an engineering CV.
-        </p>
+    <p class="label sage">Artistic Practice</p>
+
+    <div class="art-top">
+      <div class="art-statement">
+        <h2>Performance, sound design,<br>and lecture-based artistic work.</h2>
+        <p class="art-lead">Over the past decade I have worked across breakdance, contemporary dance, theatre, and interdisciplinary performance in Germany and Finland, including stage performance, sound design, teaching, and artistic collaboration.</p>
+        <p class="art-sub">Currently developing lecture performances that combine movement, spoken text, live music, and scientific content. The work explores ecological and biological systems through embodied experience rather than representation.</p>
       </div>
-      <div class="right">
-        <p>
-          I performed in breakdance and contemporary dance productions across Germany and Europe,
-          working with Samir Akika, Neco Celik, Julio Cesar Iglesias Ungo, Susanne Linke,
-          and Lin Verleger. Venues included Goethe Theater Bremen, Schauspielhaus Bochum,
-          Tanzhaus NRW, and international festivals.
-        </p>
-        <p>
-          Alongside performance, I created sound design for live theatre and directed youth
-          dance projects as artistic director — including at Flottmannhallen Herne and Grillo Theater Essen.
-        </p>
-        <p>
-          Current ongoing project: <em>I, Holobiont?</em> with Nella Turkki (2025–2026).
-        </p>
+      <div class="art-meta">
+        <div class="art-meta-item">
+          <span class="art-meta-num">10+</span>
+          <span class="art-meta-label">Years international performance</span>
+        </div>
+        <div class="art-meta-item">
+          <span class="art-meta-num">&#127942;</span>
+          <span class="art-meta-label">German Champion &middot; Battle of the Year 2011 &amp; 2012</span>
+        </div>
+        <div class="art-meta-item">
+          <span class="art-meta-num">3</span>
+          <span class="art-meta-label">Ongoing lecture performance projects</span>
+        </div>
       </div>
     </div>
 
-    <ul class="prod-list">
-      <li class="prod-item"><span class="prod-year">2025–</span><span class="prod-title"><strong>I, Holobiont?</strong> — Performer · with Nella Turkki · Herne (ongoing)</span></li>
-      <li class="prod-item"><span class="prod-year">2025</span><span class="prod-title"><strong>Edged in the Skin</strong> — Sound Design · Mia Malveniemi Company · Vaasa</span></li>
-      <li class="prod-item"><span class="prod-year">2022</span><span class="prod-title"><strong>Metsänalaiset</strong> — Performer &amp; Sound Design · with Nella Turkki · Varkaus/Vantaa</span></li>
-      <li class="prod-item"><span class="prod-year">2021</span><span class="prod-title"><strong>ILMA</strong> — Sound Design &amp; Live Music · by Nella Turkki · Helsinki</span></li>
-      <li class="prod-item"><span class="prod-year">2018</span><span class="prod-title"><strong>Basmalla</strong> — by Neco Celik · Zeche 1, Bochum</span></li>
-      <li class="prod-item"><span class="prod-year">2018</span><span class="prod-title"><strong>Surround</strong> — Overhead Project · Cologne</span></li>
-      <li class="prod-item"><span class="prod-year">2018</span><span class="prod-title"><strong>V.I.E.R</strong> — with Lin Verleger · Pottporus Festival, Herne</span></li>
-      <li class="prod-item"><span class="prod-year">2018</span><span class="prod-title"><strong>Mind the Gap</strong> — with Nella Turkki · Red Sapata, Linz</span></li>
-      <li class="prod-item"><span class="prod-year">2017</span><span class="prod-title"><strong>The Hidden Door</strong> — by Cesar Iglesias Ungo · Tanzhaus NRW, Düsseldorf</span></li>
-      <li class="prod-item"><span class="prod-year">2016</span><span class="prod-title"><strong>Invisible Wires</strong> — by Julio Iglesias Ungo · Tanzhaus NRW, Düsseldorf</span></li>
-      <li class="prod-item"><span class="prod-year">2016</span><span class="prod-title"><strong>Akika X</strong> — by Samir Akika · Goethe Theater Bremen</span></li>
-      <li class="prod-item"><span class="prod-year">2015</span><span class="prod-title"><strong>Einer Flog über das Kuckucksnest</strong> — by Samir Akika · Goethe Theater Bremen</span></li>
-      <li class="prod-item"><span class="prod-year">2015</span><span class="prod-title"><strong>Ruhm</strong> — by Neco Celik · Schauspielhaus Bochum / Renegade in Residence</span></li>
-      <li class="prod-item"><span class="prod-year">2014</span><span class="prod-title"><strong>The Family</strong> — by Julio Cesar Iglesias Ungo · Pumpenhaus Münster</span></li>
-      <li class="prod-item"><span class="prod-year">2013</span><span class="prod-title"><strong>Ruhr-Ort</strong> — by Susanne Linke · Renegade / Schauspielhaus Bochum</span></li>
-      <li class="prod-item"><span class="prod-year">2013</span><span class="prod-title"><strong>Lust</strong> — LA MACANA (ES) · Renegade Company, Herne</span></li>
-      <li class="prod-item"><span class="prod-year">2012</span><span class="prod-title"><strong>Irgendwo</strong> — by Malou Airoudue · Renegade / Schauspielhaus Bochum</span></li>
-      <li class="prod-item"><span class="prod-year">2011</span><span class="prod-title"><strong>Zoff in Chioggia</strong> — by Nuran David Calis · Schauspielhaus Bochum</span></li>
-      <li class="prod-item"><span class="prod-year">2010</span><span class="prod-title"><strong>Rumble Reloaded / Triptique</strong> — by Lorca Renoux · Renegade Company</span></li>
-    </ul>
+    <div class="art-projects">
 
-    <div class="artistic-footer">
-      Full artistic CV — complete production history, teaching credits (PACT Zollverein, Folkwang Universität, Tanzhaus NRW), and institutional references — available on request.
+      <div class="art-project">
+        <div class="art-project-head">
+          <span class="art-project-tag">Lecture Performance &middot; Ongoing</span>
+          <h3>I, Holobiont?</h3>
+          <span class="art-project-sub">with Nella Turkki &middot; Herne, 2025&ndash;2026</span>
+        </div>
+        <p>A lecture performance exploring the idea of organisms as interconnected living systems composed of host and microbial life. Combining dance, spoken text, live music, and scientific narration, the work examines how ecological and biological interdependence shapes human behaviour and perception.</p>
+        <p>Performed and touring.</p>
+      </div>
+
+      <div class="art-project">
+        <div class="art-project-head">
+          <span class="art-project-tag">Performance &middot; Sound Design &middot; 2022</span>
+          <h3>Metsänalaiset</h3>
+          <span class="art-project-sub">Under the Forest &middot; with Nella Turkki &middot; Varkaus / Vantaa</span>
+        </div>
+        <p>A dance-theatre piece set in a forest environment. Janis performed and created the sound design, building a spatial soundscape drawn from the mycorrhizal networks that connect trees beneath the soil.</p>
+      </div>
+
+      <div class="art-project">
+        <div class="art-project-head">
+          <span class="art-project-tag">Lecture Performance &middot; In Development</span>
+          <h3>Juurimatka</h3>
+          <span class="art-project-sub">Root Journey</span>
+        </div>
+        <p>A lecture performance in development combining plant biology, embodiment theory, and personal narrative.</p>
+      </div>
+
     </div>
+
+    <div class="art-history">
+      <p class="case-block-label" style="margin-bottom:1.25rem;">Performance History</p>
+      <p class="art-history-intro">Stage career spanning breakdance competition at world level, contemporary dance, and theatre with companies including Goethe Theater Bremen, Schauspielhaus Bochum, Tanzhaus NRW, and Renegade. Teaching and artistic direction at PACT Zollverein, Folkwang Universit&auml;t, and Grillo Theater Essen.</p>
+      <div class="art-history-grid">
+        <div class="art-hist-item"><span class="art-hist-year">2025</span><span>Edged in the Skin &middot; Sound Design &middot; Mia Malveniemi Company &middot; Vaasa</span></div>
+        <div class="art-hist-item"><span class="art-hist-year">2021</span><span>ILMA &middot; Sound Design &amp; Live Music &middot; by Nella Turkki &middot; Helsinki</span></div>
+        <div class="art-hist-item"><span class="art-hist-year">2018</span><span>V.I.E.R &middot; with Lin Verleger &middot; Pottporus Festival, Herne</span></div>
+        <div class="art-hist-item"><span class="art-hist-year">2018</span><span>Basmalla &middot; by Neco Celik &middot; Zeche 1, Bochum</span></div>
+        <div class="art-hist-item"><span class="art-hist-year">2017</span><span>The Hidden Door &middot; by Cesar Iglesias Ungo &middot; Tanzhaus NRW</span></div>
+        <div class="art-hist-item"><span class="art-hist-year">2016</span><span>Akika X &middot; by Samir Akika &middot; Goethe Theater Bremen</span></div>
+        <div class="art-hist-item"><span class="art-hist-year">2015</span><span>Einer Flog &uuml;ber das Kuckucksnest &middot; Goethe Theater Bremen</span></div>
+        <div class="art-hist-item"><span class="art-hist-year">2015</span><span>Ruhm &middot; by Neco Celik &middot; Schauspielhaus Bochum / Renegade</span></div>
+        <div class="art-hist-item"><span class="art-hist-year">2013</span><span>Ruhr-Ort &middot; by Susanne Linke &middot; Renegade / Schauspielhaus Bochum</span></div>
+        <div class="art-hist-item"><span class="art-hist-year">2011</span><span>Zoff in Chioggia &middot; by Nuran David Calis &middot; Schauspielhaus Bochum</span></div>
+      </div>
+      <p class="art-history-note">Full production history and artistic CV available on request.</p>
+    </div>
+
   </div>
 </section>
 
@@ -693,16 +1243,17 @@
 <section id="contact">
   <div class="wrap reveal">
     <p class="label">Contact</p>
-    <h2>Building usable systems for complex technical environments.</h2>
+    <h2>Open to the right opportunity.</h2>
     <p class="sub">
-      Targeting Application Engineer and R&amp;D roles from summer 2026,
-      primarily in measurement, transducer, or acoustic materials contexts.
-      Also available for acoustic consulting and research collaborations.
+      Currently completing PhD research at Aalto University with a focus on acoustic modelling, characterisation, and deployable technical systems.
+    </p>
+    <p class="sub" style="margin-top:0.75rem;">
+      Interested in Application Engineering, applied R&amp;D, and technical product environments where modelling, measurement, and operational usability intersect. Also available for acoustic consulting, technical tooling, and interdisciplinary collaborations.
     </p>
     <div class="contact-row">
-      <a class="btn" href="mailto:janis.heldmann@aalto.fi">janis.heldmann@aalto.fi</a>
-      <a class="btn ghost" href="https://linkedin.com/in/janisheldmann" target="_blank">LinkedIn</a>
-      <a class="btn ghost" href="https://janisheldmann.com" target="_blank">janisheldmann.com</a>
+      <a class="btn-dark" href="mailto:janis.heldmann@aalto.fi">janis.heldmann@aalto.fi</a>
+      <a class="btn-dark ghost" href="https://linkedin.com/in/janisheldmann" target="_blank">LinkedIn</a>
+      <a class="btn-dark ghost" href="https://janisheldmann.com" target="_blank">janisheldmann.com</a>
     </div>
   </div>
 </section>
@@ -715,13 +1266,73 @@
 </footer>
 
 <script>
+  // Scroll reveal
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => {
       if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
     });
   }, { threshold: 0.06 });
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Auto-scroll publications window on section entry
+  const pubScroll = document.getElementById('pubScroll');
+  let pubScrollDone = false;
+
+  const pubObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting && !pubScrollDone) {
+        pubScrollDone = true;
+        const total = pubScroll.scrollHeight - pubScroll.clientHeight;
+        const duration = 4000; // ms to scroll through entire list
+        const start = performance.now();
+
+        function step(now) {
+          const elapsed = now - start;
+          const progress = Math.min(elapsed / duration, 1);
+          // ease in-out
+          const ease = progress < 0.5
+            ? 2 * progress * progress
+            : -1 + (4 - 2 * progress) * progress;
+          pubScroll.scrollTop = ease * total;
+          if (progress < 1) requestAnimationFrame(step);
+        }
+        // small delay so user sees where they are first
+        setTimeout(() => requestAnimationFrame(step), 600);
+      }
+    });
+  }, { threshold: 0.4 });
+
+  if (pubScroll) pubObserver.observe(pubScroll);
+
+  // Auto-scroll bio-based publications window
+  const bioScroll = document.getElementById('bioScroll');
+  let bioScrollDone = false;
+
+  const bioObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting && !bioScrollDone) {
+        bioScrollDone = true;
+        const total = bioScroll.scrollHeight - bioScroll.clientHeight;
+        const duration = 4000;
+        const start = performance.now();
+        function step(now) {
+          const elapsed = now - start;
+          const progress = Math.min(elapsed / duration, 1);
+          const ease = progress < 0.5
+            ? 2 * progress * progress
+            : -1 + (4 - 2 * progress) * progress;
+          bioScroll.scrollTop = ease * total;
+          if (progress < 1) requestAnimationFrame(step);
+        }
+        setTimeout(() => requestAnimationFrame(step), 600);
+      }
+    });
+  }, { threshold: 0.4 });
+
+  if (bioScroll) bioObserver.observe(bioScroll);
 </script>
 
 </body>
 </html>
+
+<hr class="div" />

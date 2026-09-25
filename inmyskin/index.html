@@ -1,1 +1,183 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>IN MY SKIN – Performanceprojekt, Zeche 2, Bochum</title>
+<meta name="description" content="Kostenloses Tanz- und Performanceprojekt für 15- bis 25-Jährige. 11.–17. Oktober 2026, Zeche 2, Schauspielhaus Bochum.">
+<meta property="og:title" content="IN MY SKIN">
+<meta property="og:description" content="Was hat deine Haut erlebt? Kostenloses Performanceprojekt für 15- bis 25-Jährige, 11.–17. Oktober 2026, Zeche 2, Bochum.">
+<meta property="og:image" content="https://janisheldmann.com/inmyskin/og.jpg">
+<meta property="og:url" content="https://janisheldmann.com/inmyskin/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%23224C9B'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #000;
+    --grey: #767676;
+    --line: #e4e4e4;
+    --blue: #224c9b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #fff;
+    color: var(--ink);
+    font-family: "Instrument Sans", "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  img { display: block; max-width: 100%; height: auto; }
+  a { color: inherit; text-underline-offset: 4px; text-decoration-thickness: 1px; }
+  a:hover { color: var(--blue); }
+  :focus-visible { outline: 2px solid var(--blue); outline-offset: 4px; }
 
+  .page {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: clamp(40px, 8vw, 96px) clamp(24px, 6vw, 64px) 48px;
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: clamp(32px, 6vw, 80px);
+    align-items: end;
+    padding-bottom: 2vh;
+    min-height: calc(100svh - 2 * clamp(40px, 8vw, 96px));
+  }
+  h1 { margin: 0; }
+  h1 img { width: 100%; max-width: 520px; }
+  .questions { margin: 2em 0 0; color: var(--grey); }
+  .key { margin: 1.4em 0 0; }
+  .cta {
+    display: inline-block;
+    margin-top: 1.4em;
+    padding: 12px 22px;
+    min-height: 48px;
+    border: 1px solid var(--ink);
+    border-radius: 999px;
+    text-decoration: none;
+  }
+  .cta:hover { border-color: var(--blue); }
+  .hands { position: absolute; top: 0; right: 0; width: min(32vw, 400px); transform: scaleX(-1); z-index: -1; }
+  body { position: relative; }
+
+  section {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: clamp(32px, 6vw, 80px);
+    padding: clamp(64px, 12vw, 140px) 0 0;
+  }
+  h2 { font-size: 18px; font-weight: 500; margin: 0; }
+  .text p { margin: 0 0 1.2em; max-width: 32em; }
+
+  dl { margin: 0; }
+  dl div {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2px;
+    gap: 16px;
+    padding: 14px 0;
+    border-top: 1px solid var(--line);
+  }
+  dl div:last-child { border-bottom: 1px solid var(--line); }
+  dt { color: var(--grey); }
+  dd { margin: 0; font-variant-numeric: tabular-nums; }
+
+  .register {
+    display: inline-block;
+    padding: 8px 0;
+    margin-top: .4em;
+    font-size: clamp(22px, 3vw, 32px);
+    line-height: 1.25;
+    word-break: break-word;
+  }
+
+  footer {
+    padding-top: clamp(80px, 14vw, 160px);
+    font-size: 14px;
+    color: var(--grey);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: clamp(32px, 6vw, 80px);
+  }
+  footer p { margin: 0; max-width: 34em; }
+  footer .partners { grid-column: 1 / -1; width: 100%; max-width: 720px; margin-left: -12px; }
+  .partners-m { display: none; }
+  footer { row-gap: 32px; }
+
+  @media (max-width: 720px) {
+    header, section, footer { grid-template-columns: 1fr; }
+    header { min-height: 0; }
+    section { gap: 16px; padding-top: 72px; }
+    h2 { color: var(--grey); }
+    footer { padding-top: 88px; }
+    footer .partners { display: none; }
+    .partners-m { display: grid; gap: 20px; grid-column: 1; }
+    .partners-m img:first-child { width: 58%; margin-left: -8px; }
+    .partners-m img:last-child { width: 100%; }
+    .hands { width: 52vw; }
+    header { padding-top: 48vw; }
+    dl div { grid-template-columns: 1fr; gap: 2px; }
+  }
+</style>
+</head>
+<body>
+<img class="hands" src="haende.webp" alt="" width="477" height="644">
+<div class="page">
+  <header>
+    <div>
+      <h1><img src="logo.png" alt="IN MY SKIN" width="1166" height="718"></h1>
+      <p class="questions">Was hat deine Haut erlebt?<br>Was hat deine Haut bewegt?</p>
+      <p class="key">11.–17. Oktober 2026<br>Zeche 2, Schauspielhaus Bochum<br>Für 15- bis 25-Jährige, kostenlos</p>
+      <a class="cta" href="#anmeldung">Zur Anmeldung</a>
+    </div>
+  </header>
+
+  <section aria-labelledby="projekt">
+    <h2 id="projekt">Das Projekt</h2>
+    <div class="text">
+      <p>Bist du 15–25 Jahre alt, jugendlich oder junge*r Erwachsene*r, mit Interesse an Tanz und Performance?</p>
+      <p>Sei dabei bei einem einwöchigen Performance-Projekt in der Zeche 2 des Schauspielhauses Bochum. Gemeinsam entwickeln wir eine neue Performance, die Urban Dance, Contemporary Dance und Elemente des dokumentarischen Theaters verbindet.</p>
+      <p>In einer intensiven Woche entsteht IN MY SKIN – eine gemeinsame Performance, die am Samstag, den 17. Oktober, auf der Bühne der Zeche 2 Premiere feiert.</p>
+      <p>Nella Turkki und <a href="https://janisheldmann.com">Janis Heldmann</a> sind etablierte Tanz- und Theaterschaffende, die international mit unterschiedlichen Gruppen arbeiten und Performances für professionelle Bühnen entwickeln.</p>
+      <p>Du kannst bereits Erfahrung mit Tanz, Theater oder Performance haben – aber auch ohne Vorerfahrung bist du herzlich willkommen! Die Teilnahme ist kostenlos. Wir erwarten jedoch, dass du an allen Terminen des Projekts teilnehmen kannst.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="termine">
+    <h2 id="termine">Termine</h2>
+    <dl>
+      <div><dt>Auftakt</dt><dd>So. 11.10.2026, 14–18 Uhr</dd></div>
+      <div><dt>Erarbeitungswoche</dt><dd>Mo. 12. – Fr. 16.10.2026, 16–20 Uhr</dd></div>
+      <div><dt>Abschlusspräsentation</dt><dd>Sa. 17.10.2026, 10–15 Uhr</dd></div>
+      <div><dt>Ort</dt><dd>Zeche 2, Schauspielhaus Bochum</dd></div>
+    </dl>
+  </section>
+
+  <section aria-labelledby="anmeldung">
+    <h2 id="anmeldung">Anmeldung</h2>
+    <div>
+      <p class="text" style="margin:0 0 1em">Komm dazu, entwickle die Performance mit uns und bring deine Geschichte auf die Bühne!</p>
+      <a class="register" href="mailto:jungesschauspielhaus@schauspielhausbochum.de?subject=Anmeldung%20IN%20MY%20SKIN&body=Hallo%2C%0A%0Aich%20m%C3%B6chte%20bei%20IN%20MY%20SKIN%20mitmachen.%0A%0AName%3A%0AAlter%3A%0ATelefon%3A%0A">jungesschauspielhaus@<wbr>schauspielhausbochum.de</a>
+    </div>
+  </section>
+
+  <footer>
+    <img class="partners" src="partner.png" alt="LAG Tanz NRW, Schauspielhaus Bochum und Ministerium für Kinder, Jugend, Familie, Gleichstellung, Flucht und Integration des Landes Nordrhein-Westfalen" width="1142" height="172" loading="lazy">
+    <div class="partners-m">
+      <img src="partner-a.png" alt="LAG Tanz NRW und Schauspielhaus Bochum" width="360" height="172" loading="lazy">
+      <img src="partner-b.png" alt="Ministerium für Kinder, Jugend, Familie, Gleichstellung, Flucht und Integration des Landes Nordrhein-Westfalen" width="732" height="172" loading="lazy">
+    </div>
+    <p><a href="https://janisheldmann.com">janisheldmann.com</a></p>
+  </footer>
+</div>
+</body>
+</html>
